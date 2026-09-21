@@ -6,22 +6,26 @@ fn is_even(n: i32) -> bool {
 fn main() {
     println!("{}", is_even(4)); //output: true
     println!("{}", is_even(7)); //output: false
+    println!("{}", is_prime(7)); //true
+    println!("{}", is_prime(10)); //false
+    println!("{}", is_prime(1)); //false
 }
 
 
-fn is_prime(n: i32) -> bool }
+// is_prime
+fn is_prime(n: u32) -> bool {
    if n < 2 {
       return false;
    }
 
-   for i in 2..n { 
+   let mut i = 2;
+   while i * i <= n {
        if n % i == 0 {
           return false;
-       }
+        }
+        i = i +1;
+     }
 
-   true
-   }
-  
-fn main() { 
-println!("{}", is_prime(7)); // Prints: true
+       true
+
 }
