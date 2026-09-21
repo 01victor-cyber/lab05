@@ -12,6 +12,7 @@ fn main() {
     let number = 12345;
     let result = digit_sum(number);
     println!("The sum of digits of {} is {}", number, result);
+    println!("{}", count_divisors(10));
 }
 
 
@@ -45,4 +46,19 @@ fn digit_sum(n: i32) -> i32 {
 }
 
     sum
+}
+
+// count divisors
+
+fn count_divisors(n: i32) -> i32 {
+   let mut count = 0;
+   let mut i = 1;
+   
+   while i < n {
+       if n % i == 0 {
+           count += 1;
+       }
+       i += 1;
+ }
+   count
 }
