@@ -9,6 +9,9 @@ fn main() {
     println!("{}", is_prime(7)); //true
     println!("{}", is_prime(10)); //false
     println!("{}", is_prime(1)); //false
+    let number = 12345;
+    let result = digit_sum(number);
+    println!("The sum of digits of {} is {}", number, result);
 }
 
 
@@ -28,4 +31,18 @@ fn is_prime(n: u32) -> bool {
 
        true
 
+}
+
+// Implementation of digit_sum funcation
+fn digit_sum(n: i32) -> i32 {
+    let mut sum = 0;
+    let mut temp = n;
+
+    while temp != 0 {
+       let last_digit = temp % 10;
+       sum += last_digit;
+       temp /= 10;
+}
+
+    sum
 }
